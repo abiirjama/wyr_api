@@ -1,35 +1,43 @@
+// a list of "would you rather" questions with two answer choices
 const questions = [
     {
-        'question': 'Live in a house shaped like a triangle or a house shaped like a circle?',
-        'answer1': 'Triangle house',
-        'answer2': 'Circle house'
+        'question': 'live in a house shaped like a triangle or a house shaped like a circle?',
+        'answer1': 'triangle house',
+        'answer2': 'circle house'
     },
     {
-        'question': 'Have a cat-sized elephant or an elephant-sized cat?',
-        'answer1': 'Cat-sized elephant',
-        'answer2': 'Elephant-sized cat'
+        'question': 'have a cat-sized elephant or an elephant-sized cat?',
+        'answer1': 'cat-sized elephant',
+        'answer2': 'elephant-sized cat'
     },
     {
-        'question': 'Be able to fly or be able to breathe underwater?',
-        'answer1': 'Fly',
-        'answer2': 'Breath underwater'
+        'question': 'be able to fly or be able to breathe underwater?',
+        'answer1': 'fly',
+        'answer2': 'breathe underwater'
     },
     {
-        'question': 'Play any musical instrument or speak any language?',
-        'answer1': 'Play any musical instrument',
-        'answer2': 'Speak any language'
+        'question': 'play any musical instrument or speak any language?',
+        'answer1': 'play any musical instrument',
+        'answer2': 'speak any language'
     },
     {
-        'question': 'Be a famous movie star or a famous scientist?',
-        'answer1': 'Famous movie star',
-        'answer2': 'Famous scientist'
+        'question': 'be a famous movie star or a famous scientist?',
+        'answer1': 'famous movie star',
+        'answer2': 'famous scientist'
     },
 ]
 
-function randomWYRQuestion() {
-    const randomIndex = Math.floor(Math.random() * questions.length)
-    const randomQuestion = questions[randomIndex]
-    return randomQuestion
+// this function picks a random question from the list
+function randomwyrquestion() {
+    // generate a random index between 0 and the length of the list
+    const randomindex = Math.floor(Math.random() * questions.length)
+
+    // get the question at that index
+    const randomquestion = questions[randomindex]
+
+    // return the random question object
+    return randomquestion
 }
 
-module.exports = randomWYRQuestion
+// export the function so it can be used in other files
+module.exports = randomwyrquestion
